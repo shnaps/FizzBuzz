@@ -16,16 +16,21 @@ public class FizzBuzz {
         if (i > 100) {
             return;
         }
-        System.out.print("\n" + i + " : ");
         if ((i % 3 == 0) && (i % 5 == 0)) {
-            System.out.print("FizzBuzz ");
+            System.out.println(i + " FizzBuzz");
+        } else {
+            if (i % 3 == 0) {
+                System.out.println(i + " Fizz");
+            } else {
+                if (i % 5 == 0) {
+                    System.out.println(i + " Buzz");
+                }
+            }
         }
-        if (i % 3 == 0) {
-            System.out.print("Fizz ");
+        if (!(i % 3 == 0) && !(i % 5 == 0)) {
+            System.out.println(i);
         }
-        if (i % 5 == 0) {
-            System.out.print("Buzz ");
-        }
+
         fizzBuzzLoad(i + 1);
     }
 
